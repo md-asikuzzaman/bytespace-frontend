@@ -74,50 +74,66 @@
   --color-border: var(--color-border);
 
   /* Font Families */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Satoshi', sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Satoshi", sans-serif;
 
   /* Typography Styles (Size / Line Height) */
   --text-heading-l: 72px;
   --text-heading-l--line-height: 1.2;
-  
+
   --text-heading-m: 44px;
   --text-heading-m--line-height: 1.2;
-  
+
   --text-heading-s: 36px;
   --text-heading-s--line-height: 1.2;
-  
+
   --text-heading-xs: 20px;
   --text-heading-xs--line-height: 1.2;
 
   --text-body-l: 18px;
   --text-body-l--line-height: 1.6;
-  
+
   --text-body-m: 16px;
   --text-body-m--line-height: 1.6;
-  
+
   --text-body-s: 14px;
   --text-body-s--line-height: 1.6;
-  
+
   --text-body-xs: 12px;
   --text-body-xs--line-height: 1.6;
 
   --text-label-l: 18px;
   --text-label-l--line-height: 1.2;
-  
+
   --text-label-m: 16px;
   --text-label-m--line-height: 1.2;
-  
+
   --text-label-s: 14px;
   --text-label-s--line-height: 1.2;
-  
+
   --text-label-xs: 12px;
   --text-label-xs--line-height: 1.2;
 }
 
 /* Optional utility classes or base layers for direct use */
 @layer utilities {
-  .font-heading { font-family: var(--font-heading); font-weight: 600; }
-  .font-body { font-family: var(--font-body); font-weight: 400; }
-  .font-label { font-family: var(--font-body); font-weight: 500; }
+  .font-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  .font-body {
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+  .font-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 115px 115px;
 }

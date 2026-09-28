@@ -3,10 +3,10 @@ import HeroSearch from "@/components/HeroSearch";
 
 const HeroSection = () => {
   return (
-    <section className="bg-primary-800">
+    <section className="bg-primary-800 hero-grid">
       <Container className="min-h-screen pt-32">
         <div className="mx-auto w-full max-w-4xl text-center">
-          <h1 className="mb-8 text-4xl font-semibold leading-tight text-surface sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-8 text-4xl font-semibold leading-tight text-surface sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
             Get Access to Hundreds Courses Available
           </h1>
           <p className="mx-auto mb-12 max-w-2xl text-sm font-normal leading-6 text-surface/80 sm:text-base">
