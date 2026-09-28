@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 import Container from "../Container";
 
@@ -16,8 +20,10 @@ const actions = [
 ];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="fixed w-full top-0 z-50 md">
+    <header className="fixed top-0 z-50 w-full">
       <Container className="flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" aria-label="ByteSpace home">
@@ -27,17 +33,18 @@ const Header = () => {
             width={140}
             height={100}
             priority
+            className="h-auto w-28 sm:w-32 md:w-35"
           />
         </Link>
 
-        {/* Main Navigation */}
-        <nav aria-label="Main navigation">
+        {/* Desktop Navigation */}
+        <nav aria-label="Main navigation" className="hidden md:block">
           <ul className="flex items-center gap-6">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-surface hover:font-medium transition-colors"
+                  className="text-surface transition-all duration-200 hover:font-medium"
                 >
                   {item.label}
                 </Link>
@@ -46,17 +53,74 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Header Actions */}
-        <nav aria-label="Account navigation">
+        {/* Desktop Actions */}
+        <nav aria-label="Account navigation" className="hidden md:block">
           <ul className="flex items-center gap-4">
             {actions.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link
+                  href={item.href}
+                  className="text-surface transition-all duration-200 hover:font-medium"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          className="text-surface md:hidden cursor-pointer"
+        >
+          {isOpen ? (
+            <X size={24} strokeWidth={1.8} />
+          ) : (
+            <Menu size={24} strokeWidth={1.8} />
+          )}
+        </button>
       </Container>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="border-t border-surface/20 bg-primary-800 md:hidden">
+          <Container className="py-5">
+            <nav aria-label="Mobile navigation">
+              <ul className="flex flex-col gap-5">
+                {navigation.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-surface transition-colors hover:font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+
+                <li className="my-1 h-px bg-surface/20" />
+
+                {actions.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-surface transition-colors hover:font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </Container>
+        </div>
+      )}
     </header>
   );
 };
