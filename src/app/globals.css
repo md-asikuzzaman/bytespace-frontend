@@ -1,1 +1,123 @@
 @import "tailwindcss";
+
+:root {
+  /* Primary (Electric Violet) */
+  --color-primary: #2872ff;
+  --color-primary-hover: #1a5fe0;
+  --color-primary-50: #e7f6ff;
+  --color-primary-100: #d3eeff;
+  --color-primary-200: #b0ddff;
+  --color-primary-300: #81c5ff;
+  --color-primary-400: #4f9dff;
+  --color-primary-500: #2872ff;
+  --color-primary-600: #0445ff;
+  --color-primary-700: #0043ff;
+  --color-primary-800: #003be2;
+  --color-primary-900: #0b36a4;
+  --color-primary-950: #071e5f;
+
+  /* Secondary (Crimson / Lime Accent) */
+  --color-secondary: #cbfc01;
+  --color-secondary-50: #fdffe4;
+  --color-secondary-100: #faffc5;
+  --color-secondary-200: #f2ff92;
+  --color-secondary-300: #e4ff54;
+  --color-secondary-400: #d4fb20;
+  --color-secondary-500: #cbfc01;
+  --color-secondary-600: #8cb400;
+  --color-secondary-700: #6a8902;
+  --color-secondary-800: #546b09;
+  --color-secondary-900: #465a0d;
+  --color-secondary-950: #243300;
+
+  /* Neutral Theme Colors */
+  --color-background: #ffffff;
+  --color-surface: #f5f5f6;
+  --color-foreground: #242528;
+  --color-muted: #666973;
+  --color-border: #ced0d3;
+}
+
+@theme inline {
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+  --color-primary-950: var(--color-primary-950);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-50: var(--color-secondary-50);
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-800: var(--color-secondary-800);
+  --color-secondary-900: var(--color-secondary-900);
+  --color-secondary-950: var(--color-secondary-950);
+
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+
+  /* Font Families */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Satoshi', sans-serif;
+
+  /* Typography Styles (Size / Line Height) */
+  --text-heading-l: 72px;
+  --text-heading-l--line-height: 1.2;
+  
+  --text-heading-m: 44px;
+  --text-heading-m--line-height: 1.2;
+  
+  --text-heading-s: 36px;
+  --text-heading-s--line-height: 1.2;
+  
+  --text-heading-xs: 20px;
+  --text-heading-xs--line-height: 1.2;
+
+  --text-body-l: 18px;
+  --text-body-l--line-height: 1.6;
+  
+  --text-body-m: 16px;
+  --text-body-m--line-height: 1.6;
+  
+  --text-body-s: 14px;
+  --text-body-s--line-height: 1.6;
+  
+  --text-body-xs: 12px;
+  --text-body-xs--line-height: 1.6;
+
+  --text-label-l: 18px;
+  --text-label-l--line-height: 1.2;
+  
+  --text-label-m: 16px;
+  --text-label-m--line-height: 1.2;
+  
+  --text-label-s: 14px;
+  --text-label-s--line-height: 1.2;
+  
+  --text-label-xs: 12px;
+  --text-label-xs--line-height: 1.2;
+}
+
+/* Optional utility classes or base layers for direct use */
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); font-weight: 600; }
+  .font-body { font-family: var(--font-body); font-weight: 400; }
+  .font-label { font-family: var(--font-body); font-weight: 500; }
+}
