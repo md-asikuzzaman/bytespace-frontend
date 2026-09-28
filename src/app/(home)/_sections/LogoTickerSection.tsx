@@ -21,7 +21,7 @@ const logos = [
   { src: "/images/logos/logo-5.png", alt: "Logo 5" },
 ];
 
-const LogoTicker = () => {
+const LogoTickerSection = () => {
   return (
     <section className="overflow-hidden bg-surface py-8 sm:py-12 md:py-20">
       <div className="relative mx-auto w-full">
@@ -56,4 +56,4 @@ const LogoTicker = () => {
   );
 };
 
-export default LogoTicker;
+export default LogoTickerSection;

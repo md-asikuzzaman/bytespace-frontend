@@ -1,12 +1,13 @@
-import React from "react";
 import HeroSection from "./_sections/HeroSection";
-import LogoTicker from "./_sections/LogoTicker";
+import LearningPathSection from "./_sections/LearningPathSection";
+import LogoTickerSection from "./_sections/LogoTickerSection";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <LogoTicker />
+      <LogoTickerSection />
+      <LearningPathSection />
     </>
   );
 };
