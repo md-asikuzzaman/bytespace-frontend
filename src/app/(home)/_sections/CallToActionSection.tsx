@@ -171,12 +171,12 @@ const CallToActionSection = () => {
         {/* CTA Button */}
         <motion.button
           type="button"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{
             duration: 0.7,
-            delay: 0.15,
+            delay: 0.30,
             ease: "easeOut",
           }}
           className="h-12 rounded-full bg-secondary-400 px-6 text-label-m font-medium text-gray-950 transition-colors duration-200 hover:bg-secondary-500 hover-animation sm:h-14 sm:px-8 cursor-pointer"
