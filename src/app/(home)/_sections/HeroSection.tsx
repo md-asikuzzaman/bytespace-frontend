@@ -5,7 +5,7 @@ import HeroSearch from "@/components/HeroSearch";
 
 const HeroSection = () => {
   return (
-    <section className="hero-grid relative overflow-hidden bg-primary-800">
+    <section className="grid-shape relative overflow-hidden bg-primary-800">
       <Container className="relative min-h-screen pt-28 sm:pt-32">
         {/* Hero Content */}
         <div className="relative z-10 mx-auto w-full max-w-4xl text-center">

@@ -8,23 +8,23 @@ const footerLinks = [
     links: [
       {
         label: "Featured Courses",
-        href: "/courses/featured",
+        href: "#",
       },
       {
         label: "Featured Categories",
-        href: "/categories/featured",
+        href: "#",
       },
       {
         label: "Business",
-        href: "/business",
+        href: "#",
       },
       {
         label: "IT",
-        href: "/it",
+        href: "#",
       },
       {
         label: "Design",
-        href: "/design",
+        href: "#",
       },
     ],
   },
@@ -33,23 +33,23 @@ const footerLinks = [
     links: [
       {
         label: "Development",
-        href: "/development",
+        href: "#",
       },
       {
         label: "Marketing",
-        href: "/marketing",
+        href: "#",
       },
       {
         label: "Photography",
-        href: "/photography",
+        href: "#",
       },
       {
         label: "Finance",
-        href: "/finance",
+        href: "#",
       },
       {
         label: "Sport",
-        href: "/sport",
+        href: "#",
       },
     ],
   },
@@ -58,23 +58,23 @@ const footerLinks = [
     links: [
       {
         label: "Become a Creator",
-        href: "/become-creator",
+        href: "#",
       },
       {
         label: "Affiliate Program",
-        href: "/affiliate",
+        href: "#",
       },
       {
         label: "Contact",
-        href: "/contact",
+        href: "#",
       },
       {
         label: "Help",
-        href: "/help",
+        href: "#",
       },
       {
         label: "About",
-        href: "/about",
+        href: "#",
       },
     ],
   },
@@ -83,15 +83,15 @@ const footerLinks = [
 const legalLinks = [
   {
     label: "Privacy Policy",
-    href: "/privacy",
+    href: "#",
   },
   {
     label: "Terms of Service",
-    href: "/terms",
+    href: "#",
   },
   {
     label: "Cookies Settings",
-    href: "/cookies",
+    href: "#",
   },
 ];
 

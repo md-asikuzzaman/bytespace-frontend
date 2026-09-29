@@ -126,7 +126,7 @@ const ShapeGroup = ({ shapes }: { shapes: Shape[] }) => {
 
 const CallToActionSection = () => {
   return (
-    <section className="relative overflow-hidden bg-primary-800 py-14 sm:py-16 lg:py-21">
+    <section className="relative overflow-hidden bg-primary-800 py-14 sm:py-16 lg:py-21 grid-shape">
       {/* Left Shapes */}
       <ShapeGroup shapes={leftShapes} />
 
@@ -176,7 +176,7 @@ const CallToActionSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{
             duration: 0.7,
-            delay: 0.30,
+            delay: 0.3,
             ease: "easeOut",
           }}
           className="h-12 rounded-full bg-secondary-400 px-6 text-label-m font-medium text-gray-950 transition-colors duration-200 hover:bg-secondary-500 hover-animation sm:h-14 sm:px-8 cursor-pointer"
