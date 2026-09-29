@@ -196,6 +196,10 @@
     font-family: var(--font-body);
     font-weight: 500;
   }
+
+  .hover-animation {
+    @apply transition-all duration-200 hover:-translate-y-1;
+  }
 }
 
 .hero-grid {

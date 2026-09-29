@@ -8,7 +8,7 @@ interface Props {
 
 const CourseCard = ({ title, img }: Props) => {
   return (
-    <div className="w-full bg-white rounded-3xl border border-shuttlegray-200 p-3 sm:p-4 hover:shadow-md transition-shadow">
+    <div className="w-full bg-white rounded-3xl border border-shuttlegray-200 p-3 sm:p-4 hover:shadow-md transition-shadow hover-animation">
       {/* Image Container */}
       <div className="relative w-full h-52 sm:h-60 lg:h-64 rounded-2xl overflow-hidden mb-4 sm:mb-5">
         <Image

@@ -16,14 +16,14 @@ const HeroSearch = () => {
           type="search"
           placeholder="Course, topic, creator"
           aria-label="Search for courses"
-          className="h-14 w-full rounded-full border border-border bg-surface pr-5 pl-14 text-sm text-foreground outline-none placeholder:text-muted focus:ring-2 focus:ring-primary"
+          className="h-14 w-full rounded-full border border-border bg-surface pr-5 pl-14 text-sm text-foreground outline-none placeholder:text-muted focus:ring-2 focus:ring-primary "
         />
       </div>
 
       {/* Search Button */}
       <button
         type="button"
-        className="h-14 rounded-full bg-secondary-400 px-8 font-medium text-gray-950 transition-all duration-200 hover:bg-secondary-500 cursor-pointer"
+        className="h-14 rounded-full bg-secondary-400 px-8 font-medium text-gray-950 transition-all duration-200 hover:bg-secondary-500 cursor-pointer hover-animation"
       >
         Search
       </button>

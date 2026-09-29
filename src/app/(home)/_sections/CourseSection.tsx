@@ -55,7 +55,7 @@ const CourseSection = () => {
     <section className="mt-12 sm:mt-14 lg:mt-18">
       <Container>
         {/* Heading */}
-        <h2 className="text-heading-m text-center max-w-147 mx-auto mb-3 sm:mb-4 font-semibold">
+        <h2 className="text-heading-m text-center max-w-147 mx-auto mb-3 sm:mb-4 font-semibold text-shuttlegray-950">
           Discover Your Passion, Build Your Skills
         </h2>
 

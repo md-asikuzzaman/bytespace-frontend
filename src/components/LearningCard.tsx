@@ -7,7 +7,7 @@ interface Props {
 
 const LearningCard = ({ title, img }: Props) => {
   return (
-    <div className="flex min-h-40 flex-col items-center justify-center gap-3 rounded-3xl border border-border px-3 py-7 transition-all duration-200 hover:-translate-y-1 hover:shadow-md sm:min-h-44 sm:py-8 md:min-h-48 md:py-9">
+    <div className="flex min-h-40 flex-col items-center justify-center gap-3 rounded-3xl border border-border px-3 py-7  hover:shadow-md sm:min-h-44 sm:py-8 md:min-h-48 md:py-9 hover-animation">
       <Image
         src={img}
         alt={title}
