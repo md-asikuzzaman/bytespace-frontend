@@ -30,6 +30,19 @@
   --color-secondary-900: #465a0d;
   --color-secondary-950: #243300;
 
+  /* Shuttle Gray Palette */
+  --color-shuttlegray-50: #f5f5f6;
+  --color-shuttlegray-100: #e5e6e8;
+  --color-shuttlegray-200: #ced0d3;
+  --color-shuttlegray-300: #abaeb5;
+  --color-shuttlegray-400: #82868e;
+  --color-shuttlegray-500: #666973;
+  --color-shuttlegray-600: #585a62;
+  --color-shuttlegray-700: #4b4c53;
+  --color-shuttlegray-800: #424348;
+  --color-shuttlegray-900: #3a3b3f;
+  --color-shuttlegray-950: #242528;
+
   /* Neutral Theme Colors */
   --color-background: #ffffff;
   --color-surface: #f5f5f6;
@@ -66,6 +79,19 @@
   --color-secondary-800: var(--color-secondary-800);
   --color-secondary-900: var(--color-secondary-900);
   --color-secondary-950: var(--color-secondary-950);
+
+  /* Shuttle Gray Colors */
+  --color-shuttlegray-50: var(--color-shuttlegray-50);
+  --color-shuttlegray-100: var(--color-shuttlegray-100);
+  --color-shuttlegray-200: var(--color-shuttlegray-200);
+  --color-shuttlegray-300: var(--color-shuttlegray-300);
+  --color-shuttlegray-400: var(--color-shuttlegray-400);
+  --color-shuttlegray-500: var(--color-shuttlegray-500);
+  --color-shuttlegray-600: var(--color-shuttlegray-600);
+  --color-shuttlegray-700: var(--color-shuttlegray-700);
+  --color-shuttlegray-800: var(--color-shuttlegray-800);
+  --color-shuttlegray-900: var(--color-shuttlegray-900);
+  --color-shuttlegray-950: var(--color-shuttlegray-950);
 
   --color-background: var(--color-background);
   --color-surface: var(--color-surface);
