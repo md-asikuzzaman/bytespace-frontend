@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Container from "../Container";
+import clsx from "clsx";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -21,9 +22,32 @@ const actions = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="fixed top-0 z-50 w-full">
+    <header
+      className={clsx(
+        "fixed top-0 z-50 w-full transition-all duration-300",
+        isScrolled
+          ? "bg-primary-800/95 shadow-sm backdrop-blur-md"
+          : "bg-transparent",
+        isOpen && "bg-primary-800 shadow-sm backdrop-blur-md",
+      )}
+    >
       <Container className="flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" aria-label="ByteSpace home">
@@ -75,7 +99,7 @@ const Header = () => {
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
-          className="text-surface md:hidden cursor-pointer"
+          className="cursor-pointer text-surface md:hidden"
         >
           {isOpen ? (
             <X size={24} strokeWidth={1.8} />
