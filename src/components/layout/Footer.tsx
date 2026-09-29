@@ -1,70 +1,80 @@
-import React from "react";
-import Container from "../Container";
-import Link from "next/link";
 import Image from "next/image";
-import { Search } from "lucide-react";
+import Link from "next/link";
+import Container from "../Container";
 
 const footerLinks = [
   {
-    title: "Explore",
+    title: "Column 1",
     links: [
-      {
-        label: "All Courses",
-        href: "/courses",
-      },
-      {
-        label: "Categories",
-        href: "/categories",
-      },
-      {
-        label: "Top Creators",
-        href: "/instructors",
-      },
       {
         label: "Featured Courses",
         href: "/courses/featured",
       },
+      {
+        label: "Featured Categories",
+        href: "/categories/featured",
+      },
+      {
+        label: "Business",
+        href: "/business",
+      },
+      {
+        label: "IT",
+        href: "/it",
+      },
+      {
+        label: "Design",
+        href: "/design",
+      },
     ],
   },
   {
-    title: "Company",
+    title: "Column 2",
     links: [
       {
-        label: "About Us",
-        href: "/about",
+        label: "Development",
+        href: "/development",
+      },
+      {
+        label: "Marketing",
+        href: "/marketing",
+      },
+      {
+        label: "Photography",
+        href: "/photography",
+      },
+      {
+        label: "Finance",
+        href: "/finance",
+      },
+      {
+        label: "Sport",
+        href: "/sport",
+      },
+    ],
+  },
+  {
+    title: "Column 3",
+    links: [
+      {
+        label: "Become a Creator",
+        href: "/become-creator",
+      },
+      {
+        label: "Affiliate Program",
+        href: "/affiliate",
       },
       {
         label: "Contact",
         href: "/contact",
       },
       {
-        label: "Careers",
-        href: "/careers",
-      },
-      {
-        label: "Become a Creator",
-        href: "/become-creator",
-      },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      {
-        label: "Help Center",
+        label: "Help",
         href: "/help",
       },
       {
-        label: "FAQ",
-        href: "/faq",
-      },
-      {
-        label: "Privacy Policy",
-        href: "/privacy",
-      },
-      {
-        label: "Terms & Conditions",
-        href: "/terms",
+        label: "About",
+        href: "/about",
       },
     ],
   },
@@ -90,7 +100,7 @@ const Footer = () => {
     <footer>
       <Container>
         {/* Main Footer */}
-        <div className="grid gap-12 py-14 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
+        <div className="grid gap-12 py-14 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:py-20 items-end">
           {/* Brand & Search */}
           <div className="w-full max-w-xl">
             <Link href="/" className="inline-flex items-center">
@@ -137,11 +147,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:gap-x-10">
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h3 className="text-label-m font-semibold text-shuttlegray-950">
-                  {section.title}
-                </h3>
-
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-5 space-y-3 md:space-y-4.5">
                   {section.links.map((link) => (
                     <li key={link.label}>
                       <Link
