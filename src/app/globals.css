@@ -1,5 +1,44 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@utility satoshi-regular {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+}
+
+@utility satoshi-medium {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+@utility satoshi-bold {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+}
+
 :root {
   /* Primary (Electric Violet) */
   --color-primary: #2872ff;
@@ -103,41 +142,43 @@
   --font-heading: "Poppins", sans-serif;
   --font-body: "Satoshi", sans-serif;
 
-  /* Typography Styles (Size / Line Height) */
-  --text-heading-l: 72px;
+  /* Heading */
+  --text-heading-l: clamp(2.75rem, 5vw, 4.5rem);
   --text-heading-l--line-height: 1.2;
 
-  --text-heading-m: 44px;
+  --text-heading-m: clamp(2rem, 3.5vw, 2.75rem);
   --text-heading-m--line-height: 1.2;
 
-  --text-heading-s: 36px;
+  --text-heading-s: clamp(1.75rem, 3vw, 2.25rem);
   --text-heading-s--line-height: 1.2;
 
-  --text-heading-xs: 20px;
+  --text-heading-xs: clamp(1.125rem, 2vw, 1.25rem);
   --text-heading-xs--line-height: 1.2;
 
-  --text-body-l: 18px;
+  /* Body */
+  --text-body-l: clamp(1rem, 1.5vw, 1.125rem);
   --text-body-l--line-height: 1.6;
 
-  --text-body-m: 16px;
+  --text-body-m: 1rem;
   --text-body-m--line-height: 1.6;
 
-  --text-body-s: 14px;
+  --text-body-s: 0.875rem;
   --text-body-s--line-height: 1.6;
 
-  --text-body-xs: 12px;
+  --text-body-xs: 0.75rem;
   --text-body-xs--line-height: 1.6;
 
-  --text-label-l: 18px;
+  /* Label */
+  --text-label-l: 1.125rem;
   --text-label-l--line-height: 1.2;
 
-  --text-label-m: 16px;
+  --text-label-m: 1rem;
   --text-label-m--line-height: 1.2;
 
-  --text-label-s: 14px;
+  --text-label-s: 0.875rem;
   --text-label-s--line-height: 1.2;
 
-  --text-label-xs: 12px;
+  --text-label-xs: 0.75rem;
   --text-label-xs--line-height: 1.2;
 }
 

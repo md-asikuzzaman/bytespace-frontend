@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
+
 import "./globals.css";
 
 import Header from "@/components/layout/Header";
@@ -13,6 +14,8 @@ const poppins = Poppins({
   display: "swap",
 });
 
+
+
 export const metadata: Metadata = {
   title: "ByteSpace",
   description: "Learn from creators and build your skills.",
@@ -24,7 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.className} antialiased`}>
+    <html
+      lang="en"
+      className={`${poppins.className} antialiased`}
+    >
       <body className="flex min-h-screen flex-col font-poppins">
         <Header />
         <main className="grow">{children}</main>
