@@ -9,7 +9,7 @@ interface Props {
 
 const TestimonialCard = ({ name, role, img, quote }: Props) => {
   return (
-    <div className="space-y-6 bg-white p-3 md:p-6 rounded-3xl">
+    <div className="space-y-6 bg-white p-3 md:p-6 rounded-3xl z-20 shadow-xs">
       <Image src={img} alt={name} width={100} height={100} />
       <div className="">
         <h3 className="text-heading-xs font-semibold text-shuttlegray-950">

@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import TestimonialCard from "@/components/TestimonialCard";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -27,7 +28,32 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section className="mt-12 sm:mt-14 lg:mt-18">
+    <section className="pt-12 sm:pt-14 lg:pt-18 relative pb-14">
+      {/* Shape settings */}
+      <Image
+        src="/images/testimonials/shape-1.png"
+        alt="Shape"
+        width={200}
+        height={200}
+        objectFit="cover"
+        className="h-full w-auto absolute top-0 left-0 pointer-events-none"
+      />
+      <Image
+        src="/images/testimonials/shape-2.png"
+        alt="Shape"
+        width={200}
+        height={200}
+        objectFit="cover"
+        className="absolute top-0 left-1/2 h-full w-auto -translate-x-1/2 pointer-events-none"
+      />
+      <Image
+        src="/images/testimonials/shape-3.png"
+        alt="Shape"
+        width={200}
+        height={200}
+        objectFit="cover"
+        className="h-full w-auto absolute top-0 right-0 pointer-events-none"
+      />
       <Container>
         {/* Heading & Description */}
         <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-end lg:gap-8">
@@ -39,7 +65,7 @@ const TestimonialSection = () => {
           </div>
 
           {/* Description */}
-          <p className="w-full max-w-229.25 text-body-l text-shuttlegray-400 satoshi-regular lg:flex-1">
+          <p className="w-full max-w-229.25 text-body-l text-shuttlegray-500 satoshi-regular lg:flex-1 z-10">
             At ByteSpace, our vibrant community of learners and creators is at
             the heart of what we do. Hear directly from those who have
             experienced the transformative journey of learning and creating on
@@ -49,7 +75,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:mt-18 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-10 lg:mt-18 lg:grid-cols-3 items-baseline">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.name}
