@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import CourseCard from "@/components/CourseCard";
+import CourseCard from "@/components/cards/CourseCard";
 import clsx from "clsx";
 
 const CourseSection = () => {

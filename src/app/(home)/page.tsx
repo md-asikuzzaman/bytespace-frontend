@@ -4,6 +4,7 @@ import LogoTickerSection from "./_sections/LogoTickerSection";
 import CourseSection from "./_sections/CourseSection";
 import CallToActionSection from "./_sections/CallToActionSection";
 import TestimonialSection from "./_sections/TestimonialSection";
+import FeaturedSection from "./_sections/FeaturedSection";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <LogoTickerSection />
       <CourseSection />
       <LearningPathSection />
+      <FeaturedSection />
       <CallToActionSection />
       <TestimonialSection />
     </>

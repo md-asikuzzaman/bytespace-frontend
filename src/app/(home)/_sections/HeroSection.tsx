@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Container from "@/components/Container";
-import HeroSearch from "@/components/HeroSearch";
+import HeroSearch from "@/components/ui/HeroSearch";
 
 const HeroSection = () => {
   return (

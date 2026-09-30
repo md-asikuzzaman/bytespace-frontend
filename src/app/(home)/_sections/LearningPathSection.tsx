@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import LearningCard from "@/components/LearningCard";
+import LearningCard from "@/components/cards/LearningCard";
 
 const learningPaths = [
   {
@@ -30,7 +30,7 @@ const learningPaths = [
 
 const LearningPathSection = () => {
   return (
-    <section className="mt-12 sm:mt-14 lg:mt-18">
+    <section className="pt-12 sm:pt-14 lg:pt-18 pb-14 sm:pb-18 lg:pb-30">
       <Container>
         {/* Section Header */}
         {/* Heading */}

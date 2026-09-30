@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialCard from "@/components/cards/TestimonialCard";
 import Image from "next/image";
 
 const testimonials = [
@@ -28,7 +28,7 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section className="pt-12 sm:pt-14 lg:pt-18 relative pb-14">
+    <section className="pt-12 sm:pt-14 lg:pt-18 relative pb-12 md:pb-14">
       {/* Shape settings */}
       <Image
         src="/images/testimonials/shape-1.png"
