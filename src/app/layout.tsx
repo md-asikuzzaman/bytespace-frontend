@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -30,6 +31,7 @@ export default function RootLayout({
           <Header />
           <main className="grow">{children}</main>
           <Footer />
+          <ScrollToTop />
         </SmoothScroll>
       </body>
     </html>
