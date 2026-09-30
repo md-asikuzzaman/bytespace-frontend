@@ -10,9 +10,30 @@ const features = [
   "Build a Community",
 ];
 
+import shape1 from "./../../../../public/images/featured/shape-1.png";
+import shape2 from "./../../../../public/images/featured/shape-2.png";
+import shape3 from "./../../../../public/images/featured/shape-3.png";
+
 const FeaturedSection = () => {
   return (
-    <section className="bg-[#fafafa] py-14 sm:py-18 md:py-24 lg:py-30">
+    <section className="bg-[#fafafa] py-14 sm:py-18 md:py-24 lg:py-30 relative">
+      {/* Shape settings */}
+      <Image
+        src={shape1}
+        alt="Shape 1"
+        className="absolute top-0 left-[10%] pointer-events-none"
+      />
+      <Image
+        src={shape2}
+        alt="Shape 2"
+        className="absolute bottom-0 left-0 pointer-events-none hidden lg:block"
+      />
+      <Image
+        src={shape3}
+        alt="Shape 3"
+        className="absolute bottom-0 right-0 pointer-events-none"
+      />
+
       <Container>
         <div>
           {/* First Feature */}
@@ -39,7 +60,7 @@ const FeaturedSection = () => {
 
             {/* Image */}
             <div className="w-full lg:flex-1">
-              <div className="mx-auto w-full max-w-[577px]">
+              <div className="mx-auto w-full max-w-144.2">
                 <Image
                   src="/images/featured/featured-1.png"
                   alt="Professional growth"
@@ -55,7 +76,7 @@ const FeaturedSection = () => {
           <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-center lg:gap-15">
             {/* Image */}
             <div className="w-full lg:order-1 lg:flex-1">
-              <div className="mx-auto w-full max-w-[577px]">
+              <div className="mx-auto w-full max-w-144.2">
                 <Image
                   src="/images/featured/featured-2.png"
                   alt="Create and manage courses"

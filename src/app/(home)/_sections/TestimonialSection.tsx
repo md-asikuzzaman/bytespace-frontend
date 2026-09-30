@@ -2,6 +2,10 @@ import Container from "@/components/Container";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import Image from "next/image";
 
+import shape1 from "./../../../../public/images/testimonials/shape-1.png";
+import shape2 from "./../../../../public/images/testimonials/shape-2.png";
+import shape3 from "./../../../../public/images/testimonials/shape-3.png";
+
 const testimonials = [
   {
     name: "Sarah M.",
@@ -30,30 +34,25 @@ const TestimonialSection = () => {
   return (
     <section className="pt-12 sm:pt-14 lg:pt-18 relative pb-12 md:pb-14">
       {/* Shape settings */}
+
       <Image
-        src="/images/testimonials/shape-1.png"
-        alt="Shape"
-        width={200}
-        height={200}
-        objectFit="cover"
-        className="h-full w-auto absolute top-0 left-0 pointer-events-none"
+        src={shape1}
+        alt="Shape 1"
+        className="absolute bottom-0 left-0 pointer-events-none"
       />
+
       <Image
-        src="/images/testimonials/shape-2.png"
-        alt="Shape"
-        width={200}
-        height={200}
-        objectFit="cover"
+        src={shape2}
+        alt="Shape 2"
         className="absolute top-0 left-1/2 h-full w-auto -translate-x-1/2 pointer-events-none"
       />
+
       <Image
-        src="/images/testimonials/shape-3.png"
-        alt="Shape"
-        width={200}
-        height={200}
-        objectFit="cover"
-        className="h-full w-auto absolute top-0 right-0 pointer-events-none"
+        src={shape3}
+        alt="Shape 3"
+        className="absolute bottom-0 right-0 pointer-events-none"
       />
+
       <Container>
         {/* Heading & Description */}
         <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-end lg:gap-8">

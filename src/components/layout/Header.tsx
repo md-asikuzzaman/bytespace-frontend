@@ -18,7 +18,7 @@ const navigation = [
 const actions = [
   { label: "Sign in", href: "/signin" },
   { label: "Join Us", href: "/signup" },
-  { label: "Bag", href: "/bag" },
+  { label: "Bag", href: "/cart" },
 ];
 
 const Header = () => {
