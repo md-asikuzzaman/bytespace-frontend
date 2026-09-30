@@ -1,17 +1,13 @@
-import { Search } from "lucide-react";
+import { SearchIcon } from "lucide-react";
 
 const HeroSearch = () => {
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col gap-3 sm:flex-row">
       {/* Search Input */}
       <div className="relative flex-1">
-        <Search
-          size={20}
-          strokeWidth={1.8}
-          className="absolute left-6 top-1/2 -translate-y-1/2 text-muted"
-          aria-hidden="true"
-        />
-
+        <div className="absolute left-6 top-1/2 -translate-y-1/2 text-muted">
+          <SearchIcon />
+        </div>
         <input
           type="search"
           placeholder="Course, topic, creator"

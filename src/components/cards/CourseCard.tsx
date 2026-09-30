@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import StarIcon from "../icons/StarIcon";
+import NetworkIcon from "../icons/NetworkIcon";
 
 interface Props {
   title: string;
@@ -43,19 +45,7 @@ const CourseCard = ({ title, img }: Props) => {
 
         <div className="flex items-center gap-1 text-shuttlegray-700 shrink-0 satoshi-regular">
           <span className="text-body-l">4.5</span>
-
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.3096 5.5525L8.8396 0.7125C8.5496 -0.2375 7.2096 -0.2375 6.9296 0.7125L5.4496 5.5525H0.999597C0.0295973 5.5525 -0.370403 6.8025 0.419597 7.3625L4.0596 9.9625L2.6296 14.5725C2.3396 15.5025 3.4196 16.2525 4.1896 15.6625L7.8796 12.8625L11.5696 15.6725C12.3396 16.2625 13.4196 15.5125 13.1296 14.5825L11.6996 9.9725L15.3396 7.3725C16.1296 6.8025 15.7296 5.5625 14.7596 5.5625H10.3096V5.5525Z"
-              fill="#CED0D3"
-            />
-          </svg>
+          <StarIcon />
         </div>
       </div>
 
@@ -71,19 +61,7 @@ const CourseCard = ({ title, img }: Props) => {
       <div className="flex items-center justify-between gap-3 mb-4">
         {/* Level */}
         <div className="flex items-center gap-2 bg-shuttlegray-50 text-shuttlegray-700 px-3 py-2 rounded-full text-label-xs satoshi-medium shrink-0">
-          <svg
-            width="13"
-            height="14"
-            viewBox="0 0 13 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 0H12.5V13.3333H10V0ZM0 8.33333H2.5V13.3333H0V8.33333ZM5 4.16667H7.5V13.3333H5V4.16667Z"
-              fill="#4B4C53"
-            />
-          </svg>
-
+          <NetworkIcon />
           <span>Beginner</span>
         </div>
 

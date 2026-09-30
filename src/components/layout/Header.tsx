@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import Container from "../Container";
 import clsx from "clsx";
+import BagIcon from "../icons/BagIcon";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -86,7 +87,7 @@ const Header = () => {
                   href={item.href}
                   className="text-surface transition-all duration-200 hover:font-medium"
                 >
-                  {item.label}
+                  {item.label === "Bag" ? <BagIcon /> : item.label}
                 </Link>
               </li>
             ))}
