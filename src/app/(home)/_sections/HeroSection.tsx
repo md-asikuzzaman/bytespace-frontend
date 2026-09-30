@@ -1,11 +1,23 @@
+"use client";
+
 import Image from "next/image";
 
 import Container from "@/components/Container";
 import HeroSearch from "@/components/ui/HeroSearch";
+import HeroShapeSettings from "@/components/ui/HeroShapeSettings";
+import { useRef } from "react";
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
   return (
-    <section className="grid-shape relative overflow-hidden bg-primary-800">
+    <section
+      className="grid-shape relative overflow-hidden bg-primary-800"
+      ref={sectionRef}
+    >
+      {/* Hero Shape Settings */}
+      <HeroShapeSettings ref={sectionRef} />
+
       <Container className="relative min-h-screen pt-28 sm:pt-32">
         {/* Hero Content */}
         <div className="relative z-10 mx-auto w-full max-w-4xl text-center">

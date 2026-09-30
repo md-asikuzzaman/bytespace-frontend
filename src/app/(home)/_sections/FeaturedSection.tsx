@@ -16,7 +16,7 @@ import shape3 from "./../../../../public/images/featured/shape-3.png";
 
 const FeaturedSection = () => {
   return (
-    <section className="bg-[#fafafa] py-14 sm:py-18 md:py-24 lg:py-30 relative">
+    <section className="bg-[#fafafa] py-14 sm:py-18 md:py-24 lg:py-30 relative overflow-hidden">
       {/* Shape settings */}
       <Image
         src={shape1}
