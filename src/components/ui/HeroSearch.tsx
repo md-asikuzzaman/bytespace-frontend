@@ -12,7 +12,7 @@ const HeroSearch = () => {
           type="search"
           placeholder="Course, topic, creator"
           aria-label="Search for courses"
-          className="h-14 w-full rounded-full border border-border bg-surface pr-5 pl-14 text-sm text-foreground outline-none placeholder:text-muted focus:ring-2 focus:ring-primary "
+          className="h-14 w-full rounded-full border border-border bg-surface pr-5 pl-14 text-sm text-foreground outline-none placeholder:text-muted focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/30"
         />
       </div>
 
