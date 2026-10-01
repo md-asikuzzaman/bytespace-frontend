@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import auth from "./../../../../public/images/auth.png";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import GoogleIcon from "@/components/icons/GoogleIcon";
 
 type SignUpFormData = z.infer<typeof signUpSchema>;
 
@@ -144,7 +146,35 @@ const SignUpPage = () => {
               </div>
             </div>
 
-            <p className="mt-12 text-center text-body-s text-shuttlegray-700 satoshi-regular sm:mt-20 sm:text-body-m lg:mt-30">
+            <div className="space-y-6 py-8 sm:space-y-7 sm:py-10 md:space-y-10 md:py-14 lg:py-18">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="h-px flex-1 bg-shuttlegray-200" />
+
+                <span className="text-body-m text-shuttlegray-400 satoshi-regular sm:text-body-l">
+                  or
+                </span>
+
+                <div className="h-px flex-1 bg-shuttlegray-200" />
+              </div>
+
+              <div className="flex items-center justify-center gap-3 sm:gap-4">
+                <Link
+                  href="#"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-shuttlegray-200 transition hover:bg-shuttlegray-50 sm:h-auto sm:w-auto sm:p-4 sm:rounded-3xl"
+                >
+                  <FacebookIcon />
+                </Link>
+
+                <Link
+                  href="#"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-shuttlegray-200 transition hover:bg-shuttlegray-50 sm:h-auto sm:w-auto sm:p-4 sm:rounded-3xl"
+                >
+                  <GoogleIcon />
+                </Link>
+              </div>
+            </div>
+
+            <p className="text-center text-body-s text-shuttlegray-700 satoshi-regular  sm:text-body-m">
               Already have an account?{" "}
               <Link href="/signin" className="text-primary-800 hover:underline">
                 Log in
