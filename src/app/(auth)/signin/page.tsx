@@ -1,57 +1,66 @@
 "use client";
 
 import Container from "@/components/Container";
-import { loginSchema } from "@/schema/signinSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Image from "next/image";
+import Link from "next/link";
 
-type LoginFormData = z.infer<typeof loginSchema>;
+import auth from "./../../../../public/images/auth.png";
+import { signInSchema } from "@/schema/signinSchema";
+
+type SignInFormData = z.infer<typeof signInSchema>;
 
 const SignInPage = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormData>({
-    resolver: zodResolver(loginSchema),
+  } = useForm<SignInFormData>({
+    resolver: zodResolver(signInSchema),
   });
 
-  const onSubmit = (data: LoginFormData) => {
+  const onSubmit = (data: SignInFormData) => {
     console.log(data);
   };
 
   return (
-    <section className="bg-primary-800 grid-shape min-h-screen py-20 sm:py-24 md:py-28 lg:py-32">
+    <section className="bg-primary-800 grid-shape min-h-screen pt-20 sm:py-28 md:py-32 lg:pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-32">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-center gap-10 sm:gap-12 md:gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Left */}
           <div className="text-center lg:text-left">
-            <h3 className="text-heading-m font-semibold text-white">
-              Welcome back
+            <h3 className="text-heading-xs font-semibold text-shuttlegray-50">
+              Sign in with ease
             </h3>
 
-            <p className="text-body-m satoshi-regular mt-4 max-w-xl text-shuttlegray-200">
-              Sign in to continue learning, track your progress, and explore
-              everything ByteSpace has to offer.
+            <p className="text-body-m satoshi-regular mx-auto mt-3 max-w-118.75 text-shuttlegray-50 sm:mt-4 sm:text-body-l lg:mx-0">
+              Experience a seamless and efficient sign-in process that grants
+              you instant access to a world of knowledge.
             </p>
+
+            <Image
+              src={auth}
+              alt="Authentication"
+              className="pointer-events-none mx-auto mt-8 w-full max-w-105 sm:mt-10 md:mt-12 lg:mx-0 lg:mt-14.5 lg:max-w-none hidden lg:block"
+            />
           </div>
 
           {/* Right */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="rounded-3xl bg-white p-6 sm:p-8 md:p-10"
+            className="rounded-2xl bg-white p-5 sm:rounded-3xl sm:p-8 md:p-10 lg:p-15"
           >
-            <p className="text-label-s satoshi-medium text-shuttlegray-400">
-              Sign In
+            <p className="text-body-m satoshi-regular text-primary-800 sm:text-body-l">
+              Sign in
             </p>
 
-            <h2 className="text-heading-s mt-2 font-semibold text-shuttlegray-950">
-              Welcome to ByteSpace
+            <h2 className="text-heading-s font-semibold text-shuttlegray-950 sm:text-heading-m">
+              Welcome back
             </h2>
 
-            <div className="mt-8 space-y-5">
+            <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-5">
               {/* Email */}
               <div>
                 <label
@@ -64,9 +73,9 @@ const SignInPage = () => {
                 <input
                   id="email"
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="designer@example.com"
                   {...register("email")}
-                  className="h-12 w-full rounded-xl border border-shuttlegray-100 px-4 outline-none transition focus:border-secondary-400"
+                  className="input-field"
                 />
 
                 {errors.email && (
@@ -78,28 +87,19 @@ const SignInPage = () => {
 
               {/* Password */}
               <div>
-                <div className="mb-2 flex items-center justify-between">
-                  <label
-                    htmlFor="password"
-                    className="text-label-s satoshi-medium text-shuttlegray-950"
-                  >
-                    Password
-                  </label>
-
-                  <Link
-                    href="/forgot-password"
-                    className="text-sm text-shuttlegray-500 transition hover:text-shuttlegray-950"
-                  >
-                    Forgot password?
-                  </Link>
-                </div>
+                <label
+                  htmlFor="password"
+                  className="text-label-s satoshi-medium mb-2 block text-shuttlegray-950"
+                >
+                  Password
+                </label>
 
                 <input
                   id="password"
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder="********"
                   {...register("password")}
-                  className="h-12 w-full rounded-xl border border-shuttlegray-100 px-4 outline-none transition focus:border-secondary-400"
+                  className="input-field"
                 />
 
                 {errors.password && (
@@ -109,23 +109,22 @@ const SignInPage = () => {
                 )}
               </div>
 
-              <button
-                type="submit"
-                className="hover-animation h-12 w-full rounded-full bg-secondary-400 font-medium text-gray-950 transition hover:bg-secondary-500"
-              >
-                Sign In
-              </button>
-
-              <p className="text-center text-sm text-shuttlegray-500">
-                Don&apos;t have an account?{" "}
-                <Link
-                  href="/sign-up"
-                  className="font-medium text-shuttlegray-950 hover:underline"
+              <div className="flex justify-end pt-1">
+                <button
+                  type="submit"
+                  className="hover-animation h-11 rounded-full bg-secondary-400 px-5 font-medium text-gray-950 transition hover:bg-secondary-500 sm:h-12 sm:px-6 cursor-pointer"
                 >
-                  Create one
-                </Link>
-              </p>
+                  Sign in
+                </button>
+              </div>
             </div>
+
+            <p className="mt-12 text-center text-body-s text-shuttlegray-700 satoshi-regular sm:mt-20 sm:text-body-m lg:mt-30">
+              New user?{" "}
+              <Link href="/signup" className="text-primary-800 hover:underline">
+                Create an account
+              </Link>
+            </p>
           </form>
         </div>
       </Container>

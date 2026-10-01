@@ -200,6 +200,10 @@
   .hover-animation {
     @apply transition-all duration-200 hover:-translate-y-1;
   }
+
+  .input-field {
+    @apply h-11 w-full rounded-xl border border-shuttlegray-100 px-4 text-sm text-shuttlegray-950 outline-none transition placeholder:text-shuttlegray-400 placeholder:opacity-100 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/30 sm:h-12 sm:text-base;
+  }
 }
 
 .grid-shape {

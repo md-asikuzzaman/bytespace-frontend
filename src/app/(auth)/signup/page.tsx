@@ -5,6 +5,10 @@ import { signUpSchema } from "@/schema/signupSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Image from "next/image";
+import Link from "next/link";
+
+import auth from "./../../../../public/images/auth.png";
 
 type SignUpFormData = z.infer<typeof signUpSchema>;
 
@@ -22,36 +26,42 @@ const SignUpPage = () => {
   };
 
   return (
-    <section className="bg-primary-800 grid-shape min-h-screen py-20 sm:py-24 md:py-28 lg:py-32">
+    <section className="bg-primary-800 grid-shape min-h-screen pt-20 sm:py-28 md:py-32 lg:pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-32">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-center gap-10 sm:gap-12 md:gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Left */}
           <div className="text-center lg:text-left">
-            <h3 className="text-heading-m font-semibold text-white">
+            <h3 className="text-heading-xs font-semibold text-shuttlegray-50">
               Sign up and come in
             </h3>
 
-            <p className="text-body-m satoshi-regular mt-4 max-w-xl text-shuttlegray-200">
+            <p className="text-body-m satoshi-regular mx-auto mt-3 max-w-118.75 text-shuttlegray-50 sm:mt-4 sm:text-body-l lg:mx-0">
               The registration process is straightforward, uncomplicated, and
               efficient, allowing users to sign up quickly, easily, and at no
               cost.
             </p>
+
+            <Image
+              src={auth}
+              alt="Authentication"
+              className="pointer-events-none mx-auto mt-8 w-full max-w-105 sm:mt-10 md:mt-12 lg:mx-0 lg:mt-14.5 lg:max-w-none hidden lg:block"
+            />
           </div>
 
           {/* Right */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="rounded-3xl bg-white p-6 sm:p-8 md:p-10"
+            className="rounded-2xl bg-white p-5 sm:rounded-3xl sm:p-8 md:p-10 lg:p-15"
           >
-            <p className="text-label-s satoshi-medium text-shuttlegray-400">
+            <p className="text-body-m satoshi-regular text-primary-800 sm:text-body-l">
               Create an Account
             </p>
 
-            <h2 className="text-heading-s mt-2 font-semibold text-shuttlegray-950">
+            <h2 className="text-heading-s font-semibold text-shuttlegray-950 sm:text-heading-m">
               Welcome to ByteSpace
             </h2>
 
-            <div className="mt-8 space-y-5">
+            <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-5">
               {/* Full Name */}
               <div>
                 <label
@@ -64,9 +74,9 @@ const SignUpPage = () => {
                 <input
                   id="fullName"
                   type="text"
-                  placeholder="Enter your full name"
+                  placeholder="Jamie Davis"
                   {...register("fullName")}
-                  className="h-12 w-full rounded-xl border border-shuttlegray-100 px-4 outline-none transition focus:border-secondary-400"
+                  className="input-field"
                 />
 
                 {errors.fullName && (
@@ -88,9 +98,9 @@ const SignUpPage = () => {
                 <input
                   id="email"
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="designer@example.com"
                   {...register("email")}
-                  className="h-12 w-full rounded-xl border border-shuttlegray-100 px-4 outline-none transition focus:border-secondary-400"
+                  className="input-field"
                 />
 
                 {errors.email && (
@@ -112,9 +122,9 @@ const SignUpPage = () => {
                 <input
                   id="password"
                   type="password"
-                  placeholder="Create a password"
+                  placeholder="********"
                   {...register("password")}
-                  className="h-12 w-full rounded-xl border border-shuttlegray-100 px-4 outline-none transition focus:border-secondary-400"
+                  className="input-field"
                 />
 
                 {errors.password && (
@@ -124,13 +134,22 @@ const SignUpPage = () => {
                 )}
               </div>
 
-              <button
-                type="submit"
-                className="hover-animation h-12 w-full rounded-full bg-secondary-400 font-medium text-gray-950 transition hover:bg-secondary-500"
-              >
-                Create Account
-              </button>
+              <div className="flex justify-end pt-1">
+                <button
+                  type="submit"
+                  className="hover-animation h-11 rounded-full bg-secondary-400 px-5 font-medium text-gray-950 transition hover:bg-secondary-500 sm:h-12 sm:px-6 cursor-pointer"
+                >
+                  Continue
+                </button>
+              </div>
             </div>
+
+            <p className="mt-12 text-center text-body-s text-shuttlegray-700 satoshi-regular sm:mt-20 sm:text-body-m lg:mt-30">
+              Already have an account?{" "}
+              <Link href="/signin" className="text-primary-800 hover:underline">
+                Log in
+              </Link>
+            </p>
           </form>
         </div>
       </Container>
