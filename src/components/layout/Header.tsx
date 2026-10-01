@@ -85,6 +85,7 @@ const Header = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-label={item.label}
                   className="text-surface transition-all duration-200 hover:font-medium"
                 >
                   {item.label === "Bag" ? <BagIcon /> : item.label}
