@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace New 🚀
 
-## Getting Started
+A responsive implementation of the **ByteSpace New** Figma design, built for the **Jr. Software Engineer (Frontend) assessment**.
 
-First, run the development server:
+## 🔗 Links
+
+* 🌐 **Live Demo:** [Vercel](https://bytespace-assessment-asik.vercel.app/)
+* 💻 **Repository:** [GitHub](https://github.com/md-asikuzzaman/bytespace-frontend)
+* 🎨 **Design:** [Figma](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1&p=f&t=eQOrqJmq6rMG5b6L-0)
+
+## ✨ Features
+
+* Responsive landing page
+* Sign In & Sign Up pages
+* Form validation with **Zod + React Hook Form**
+* Smooth micro-interactions with **Framer Motion**
+* Scroll-triggered staggered animations
+* Responsive design for desktop, tablet & mobile
+* SEO metadata
+* Accessible form elements and semantic HTML
+* Optimized images with Next.js
+* Lighthouse tested
+
+## 🛠️ Tech Stack
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* React Hook Form
+* Zod
+* Framer Motion
+
+## 📊 Lighthouse
+
+Performance, Accessibility, Best Practices, and SEO were tested using Lighthouse.
+
+![Lighthouse Score](./public/images/docs/lighthouse-score.png)
+
+## 🚀 Run Locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/md-asikuzzaman/bytespace-frontend
+cd bytespace-frontend
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌿 Git Workflow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project was developed using a separate feature branch and submitted through a Pull Request.
 
-## Learn More
+```text
+main
+  └── feature/landing-page
+          └── Pull Request → main
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Assessment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Position:** Jr. Software Engineer (Frontend)
+**Tracking ID:** `42a366e6-6dda-4823-a322-328d81831c23`
+**Deadline:** October 01, 2026
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
+**Md Asikuzzaman**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* GitHub: [@md-asikuzzaman](https://github.com/md-asikuzzaman)
+* Portfolio: [devasik.vercel.app](https://devasik.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+<p align="center">
+  Built with Next.js, TypeScript, Tailwind CSS & Framer Motion.
+</p>
