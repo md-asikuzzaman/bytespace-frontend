@@ -1,26 +1,214 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@utility satoshi-regular {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+}
+
+@utility satoshi-medium {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+@utility satoshi-bold {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary (Electric Violet) */
+  --color-primary: #2872ff;
+  --color-primary-hover: #1a5fe0;
+  --color-primary-50: #e7f6ff;
+  --color-primary-100: #d3eeff;
+  --color-primary-200: #b0ddff;
+  --color-primary-300: #81c5ff;
+  --color-primary-400: #4f9dff;
+  --color-primary-500: #2872ff;
+  --color-primary-600: #0445ff;
+  --color-primary-700: #0043ff;
+  --color-primary-800: #003be2;
+  --color-primary-900: #0b36a4;
+  --color-primary-950: #071e5f;
+
+  /* Secondary (Crimson / Lime Accent) */
+  --color-secondary: #cbfc01;
+  --color-secondary-50: #fdffe4;
+  --color-secondary-100: #faffc5;
+  --color-secondary-200: #f2ff92;
+  --color-secondary-300: #e4ff54;
+  --color-secondary-400: #d4fb20;
+  --color-secondary-500: #cbfc01;
+  --color-secondary-600: #8cb400;
+  --color-secondary-700: #6a8902;
+  --color-secondary-800: #546b09;
+  --color-secondary-900: #465a0d;
+  --color-secondary-950: #243300;
+
+  /* Shuttle Gray Palette */
+  --color-shuttlegray-50: #f5f5f6;
+  --color-shuttlegray-100: #e5e6e8;
+  --color-shuttlegray-200: #ced0d3;
+  --color-shuttlegray-300: #abaeb5;
+  --color-shuttlegray-400: #82868e;
+  --color-shuttlegray-500: #666973;
+  --color-shuttlegray-600: #585a62;
+  --color-shuttlegray-700: #4b4c53;
+  --color-shuttlegray-800: #424348;
+  --color-shuttlegray-900: #3a3b3f;
+  --color-shuttlegray-950: #242528;
+
+  /* Neutral Theme Colors */
+  --color-background: #ffffff;
+  --color-surface: #f5f5f6;
+  --color-foreground: #242528;
+  --color-muted: #666973;
+  --color-border: #ced0d3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+  --color-primary-950: var(--color-primary-950);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-50: var(--color-secondary-50);
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-800: var(--color-secondary-800);
+  --color-secondary-900: var(--color-secondary-900);
+  --color-secondary-950: var(--color-secondary-950);
+
+  /* Shuttle Gray Colors */
+  --color-shuttlegray-50: var(--color-shuttlegray-50);
+  --color-shuttlegray-100: var(--color-shuttlegray-100);
+  --color-shuttlegray-200: var(--color-shuttlegray-200);
+  --color-shuttlegray-300: var(--color-shuttlegray-300);
+  --color-shuttlegray-400: var(--color-shuttlegray-400);
+  --color-shuttlegray-500: var(--color-shuttlegray-500);
+  --color-shuttlegray-600: var(--color-shuttlegray-600);
+  --color-shuttlegray-700: var(--color-shuttlegray-700);
+  --color-shuttlegray-800: var(--color-shuttlegray-800);
+  --color-shuttlegray-900: var(--color-shuttlegray-900);
+  --color-shuttlegray-950: var(--color-shuttlegray-950);
+
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+
+  /* Font Families */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Satoshi", sans-serif;
+
+  /* Heading */
+  --text-heading-l: clamp(2.75rem, 5vw, 4.5rem);
+  --text-heading-l--line-height: 1.2;
+
+  --text-heading-m: clamp(2rem, 3.5vw, 2.75rem);
+  --text-heading-m--line-height: 1.2;
+
+  --text-heading-s: clamp(1.75rem, 3vw, 2.25rem);
+  --text-heading-s--line-height: 1.2;
+
+  --text-heading-xs: clamp(1.125rem, 2vw, 1.25rem);
+  --text-heading-xs--line-height: 1.2;
+
+  /* Body */
+  --text-body-l: clamp(1rem, 1.5vw, 1.125rem);
+  --text-body-l--line-height: 1.6;
+
+  --text-body-m: 1rem;
+  --text-body-m--line-height: 1.6;
+
+  --text-body-s: 0.875rem;
+  --text-body-s--line-height: 1.6;
+
+  --text-body-xs: 0.75rem;
+  --text-body-xs--line-height: 1.6;
+
+  /* Label */
+  --text-label-l: 1.125rem;
+  --text-label-l--line-height: 1.2;
+
+  --text-label-m: 1rem;
+  --text-label-m--line-height: 1.2;
+
+  --text-label-s: 0.875rem;
+  --text-label-s--line-height: 1.2;
+
+  --text-label-xs: 0.75rem;
+  --text-label-xs--line-height: 1.2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Optional utility classes or base layers for direct use */
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  .font-body {
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+  .font-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  .hover-animation {
+    @apply transition-all duration-200 hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply h-11 w-full rounded-xl border border-shuttlegray-100 px-4 text-sm text-shuttlegray-950 outline-none transition placeholder:text-shuttlegray-400 placeholder:opacity-100 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/30 sm:h-12 sm:text-base;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.grid-shape {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 115px 115px;
 }
