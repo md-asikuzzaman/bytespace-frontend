@@ -1,16 +1,11 @@
 "use client";
 
 import Container from "@/components/Container";
+import { loginSchema } from "@/schema/signinSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-const loginSchema = z.object({
-  email: z.email("Please enter a valid email address"),
-
-  password: z.string().min(1, "Password is required"),
-});
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
