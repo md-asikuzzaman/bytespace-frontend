@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Hero Shape Settings */}
       <HeroShapeSettings ref={sectionRef} />
 
-      <Container className="relative min-h-screen pt-28 sm:pt-32">
+      <Container className="relative min-h-screen pt-16 sm:pt-28 md:pt-32">
         {/* Hero Content */}
         <div className="relative z-10 mx-auto w-full max-w-4xl text-center">
           <h1 className="mb-6 text-4xl font-semibold leading-tight tracking-tight text-surface sm:mb-8 sm:text-5xl md:text-6xl lg:text-7xl">
