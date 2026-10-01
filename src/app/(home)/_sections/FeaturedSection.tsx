@@ -1,7 +1,11 @@
+"use client";
+
 import Container from "@/components/Container";
 import CheckIcon from "@/components/icons/CheckIcon";
 import Counter from "@/components/ui/Counter";
 import Image from "next/image";
+
+import { motion } from "motion/react";
 
 const features = [
   "Share Your Expertise",
@@ -100,17 +104,44 @@ const FeaturedSection = () => {
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-4">
+                <motion.ul
+                  className="space-y-4"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={{
+                    hidden: {},
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.15,
+                      },
+                    },
+                  }}
+                >
                   {features.map((feature) => (
-                    <li
+                    <motion.li
                       key={feature}
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          y: 30,
+                        },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          transition: {
+                            duration: 0.5,
+                            ease: "easeOut",
+                          },
+                        },
+                      }}
                       className="flex items-center gap-2 text-body-m text-shuttlegray-950"
                     >
                       <CheckIcon />
                       <span>{feature}</span>
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </div>
             </div>
           </div>
